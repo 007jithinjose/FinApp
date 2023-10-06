@@ -8,6 +8,7 @@ import { MaterialModule } from './material/material.module';
 import { HomeComponent } from './home/home.component';
 import { LoginAdminComponent } from './login/login-admin/login-admin.component';
 import { LoginUserComponent } from './login/login-user/login-user.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { LoginUserComponent } from './login/login-user/login-user.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

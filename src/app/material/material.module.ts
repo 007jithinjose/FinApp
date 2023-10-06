@@ -5,6 +5,9 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatMenuModule} from '@angular/material/menu';
 import { MatIconModule} from '@angular/material/icon';
 import { MatButtonModule} from '@angular/material/button';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [],
@@ -16,7 +19,10 @@ import { MatButtonModule} from '@angular/material/button';
     MatSlideToggleModule,
     MatMenuModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatCardModule
   ]
 })
 export class MaterialModule { }
