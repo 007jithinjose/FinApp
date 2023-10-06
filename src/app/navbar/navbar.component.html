@@ -1,12 +1,16 @@
 <mat-toolbar color="primary" class="mat-elevation-z8">
-    <button mat-icon-button>
+    <button routerLink="" mat-icon-button>
         <mat-icon>menu</mat-icon>
     </button>
     <span>FinApp</span>
     <span class="spacer"></span>
-    <button mat-button>Home</button>
-    <button mat-button>About</button>
-    <button mat-button>Contact</button>
-    <button mat-button>Login</button>
+    <button mat-button routerLink="">Home</button>
+    <button mat-button routerLink="">About</button>
+    <button mat-button routerLink="">Contact</button>
+    <button mat-raised-button  [matMenuTriggerFor]="loginlvl" >Login</button>
+    <mat-menu #loginlvl="matMenu">
+        <button mat-menu-item routerLink="login-user">User</button>
+        <button mat-menu-item routerLink="login-admin">Admin</button>
+    </mat-menu>
 </mat-toolbar>
 
