@@ -1,0 +1,21 @@
+<table mat-table [dataSource]="dataSource" matSort>
+    <ng-container matColumnDef="receipt_Id">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Receipt ID</th>
+        <td mat-cell *matCellDef="let element">{{element.receipt_Id}}</td>
+    </ng-container>
+    <ng-container matColumnDef="receipt_Date">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Receipt Date</th>
+        <td mat-cell *matCellDef="let element">{{element.receipt_Date}}</td>
+    </ng-container>
+    <ng-container matColumnDef="receipt_Name">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Receipt Name</th>
+        <td mat-cell *matCellDef="let element">{{element.receipt_Name}}</td>
+    </ng-container>
+    <ng-container matColumnDef="receipt_Amount">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Receipt Amount</th>
+        <td mat-cell *matCellDef="let element">{{element.receipt_Amount}}</td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row;columns:displayedColumns"></tr>
+</table>
+<mat-paginator [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page"></mat-paginator>
