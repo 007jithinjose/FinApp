@@ -9,6 +9,9 @@ import { HomeComponent } from './home/home.component';
 import { LoginAdminComponent } from './login/login-admin/login-admin.component';
 import { LoginUserComponent } from './login/login-user/login-user.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { BillsComponent } from './bills/bills.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ReceiptsComponent } from './receipts/receipts.component';
 
 
 @NgModule({
@@ -17,14 +20,17 @@ import { ReactiveFormsModule } from '@angular/forms';
     NavbarComponent,
     HomeComponent,
     LoginAdminComponent,
-    LoginUserComponent
+    LoginUserComponent,
+    BillsComponent,
+    ReceiptsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

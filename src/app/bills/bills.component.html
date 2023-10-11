@@ -1,0 +1,21 @@
+<table mat-table [dataSource]="dataSource" matSort>
+    <ng-container matColumnDef="bill_Id">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Bill ID</th>
+        <td mat-cell *matCellDef="let element">{{element.bill_Id}}</td>
+    </ng-container>
+    <ng-container matColumnDef="bill_Date">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Bill Date</th>
+        <td mat-cell *matCellDef="let element">{{element.bill_Date}}</td>
+    </ng-container>
+    <ng-container matColumnDef="bill_Name">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Bill Name</th>
+        <td mat-cell *matCellDef="let element">{{element.bill_Name}}</td>
+    </ng-container>
+    <ng-container matColumnDef="bill_Amount">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Bill Amount</th>
+        <td mat-cell *matCellDef="let element">{{element.bill_Amount}}</td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row;columns:displayedColumns"></tr>
+</table>
+<mat-paginator [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page"></mat-paginator>
